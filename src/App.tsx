@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className={classes.App}>
-      <BrowserRouter basename='/TodoList-React'>
+      <BrowserRouter basename='/TodoList-React-TS'>
         <Routes>
           <Route path='/'>
             <Route index element={<MainComponent />} />
