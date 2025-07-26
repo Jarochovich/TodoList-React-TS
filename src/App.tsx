@@ -1,18 +1,19 @@
 import classes from './App.module.css'
-import TodoList from './Components/TodoList/TodoList';
-import TodoForm from './Components/TodoForm/TodoForm';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MainComponent from './Components/MainComponent/MainComponent';
 
 function App() {
 
   return (
     <div className={classes.App}>
-      <h1>Список задач</h1>
-
-      <div className={classes.main}>
-        <TodoForm />
-        <hr style={{marginTop: '20px'}}/>
-        <TodoList />
-      </div>
+      <BrowserRouter basename='/TodoList-React'>
+        <Routes>
+          <Route path='/'>
+            <Route index element={<MainComponent />} />
+            <Route path='*' element={<h1>Not found page</h1>} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

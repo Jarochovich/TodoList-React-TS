@@ -2,7 +2,7 @@
 const defaultState: any = [
     { id: 1, title: 'Learning JavaScript', isDone: false },
     { id: 2, title: 'To Gym', isDone: false },
-    { id: 3, title: 'Sleep by 23.00', isDone: false },
+    { id: 3, title: 'Go to bed at 23.00', isDone: false },
   ];
   
   export const reducer = (state = defaultState, action: any) => {
